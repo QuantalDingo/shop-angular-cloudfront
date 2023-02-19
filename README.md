@@ -29,3 +29,11 @@ Follow the steps:
 - git clone
 - npm i
 - ng serve
+
+## Links
+
+AWS S3 (403 Access Denied): http://my-shop-app.com.s3-website-us-east-1.amazonaws.com
+
+AWS Cloudfront: https://d1mqmvb4hx9806.cloudfront.net
+
+AWS Cloudfront (via serverless): https://d12fyd26e5ti4v.cloudfront.net
