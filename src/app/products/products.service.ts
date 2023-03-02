@@ -49,9 +49,9 @@ export class ProductsService extends ApiService {
         );
     }
 
-    const url = this.getUrl('bff', `products/${id}`);
+    // const url = this.getUrl('bff', `products/${id}`);
     return this.http
-      .get<{ product: Product }>(url)
+      .get<{ product: Product }>(`/products/${id}`)
       .pipe(map((resp) => resp.product));
   }
 
@@ -63,8 +63,10 @@ export class ProductsService extends ApiService {
       return this.http.get<Product[]>('/assets/products.json');
     }
 
-    const url = this.getUrl('bff', 'products');
-    return this.http.get<Product[]>(url);
+    // const url = this.getUrl('bff', 'products');
+    return this.http
+      .get<{ products: Product[] }>('/products')
+      .pipe(map((item) => item.products));
   }
 
   getProductsForCheckout(ids: string[]): Observable<Product[]> {
