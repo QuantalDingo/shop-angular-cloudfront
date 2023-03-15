@@ -1,0 +1,7 @@
+{
+    "/products/*": {
+        "target": "https://uggttvpcc9.execute-api.us-east-1.amazonaws.com/dev",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
